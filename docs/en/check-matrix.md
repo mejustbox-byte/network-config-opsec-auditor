@@ -10,3 +10,5 @@
 Fail severities are critical/high/high/medium respectively. NET-002 applies to tcp, udp and any, and requires common address family. A pass for one narrow heuristic does not establish adequate segmentation. Disabled or denied rules are inapplicable to all four checks; unknown activation/action leaves all four not_tested.
 
 [Index](index.md) · [Other language](../ru/check-matrix.md)
+
+Wildcard coverage is computed after collapsing adjacent and overlapping CIDRs within each address family. Two /1 ranges covering all IPv4 addresses are therefore equivalent to /0 for NET-002.

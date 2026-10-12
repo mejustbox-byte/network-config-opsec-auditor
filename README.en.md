@@ -12,4 +12,4 @@ opsec-report html report.json --output report.html
 
 [Documentation](docs/en/index.md)
 
-Local candidate 0.1.0a1; hosted CI and release pending. Inventory checks do not establish effective reachability.
+Alpha 0.1.0a1: 24 test methods, twelve RU/EN documentation pairs and clean wheel installation passed on Linux, Windows and macOS/Python 3.13. Inventory checks do not establish effective reachability.

@@ -12,4 +12,4 @@ opsec-report html report.json --output report.html
 
 [Documentation](docs/ru/index.md)
 
-Локальный кандидат 0.1.0a1; hosted CI и релиз ожидаются. Инвентарь не доказывает фактическую доступность.
+Alpha 0.1.0a1: на Linux, Windows и macOS/Python 3.13 прошли 24 тестовых метода, 12 пар RU/EN документов и чистая установка wheel. Инвентарь не доказывает фактическую доступность.
