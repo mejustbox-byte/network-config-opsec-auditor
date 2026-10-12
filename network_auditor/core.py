@@ -21,7 +21,8 @@ def networks(value,nullable=True):
 def trusted(net,allowed):
  pieces=[n for n in allowed if n.version==net.version]
  return any(net.subnet_of(n) for n in ipaddress.collapse_addresses(pieces))
-def wildcard(nets):return {n.version for n in nets if n.prefixlen==0}
+def wildcard(nets):
+ return {version for version in [4,6] if any(n.prefixlen==0 for n in ipaddress.collapse_addresses([x for x in nets if x.version==version]))}
 def assess(data,observed_at,max_rules=1000):
  require(type(max_rules) is int and 1<=max_rules<=1000)
  exact(data,['schema_version','scope','synthetic','semantics','trusted_sources','rules'])

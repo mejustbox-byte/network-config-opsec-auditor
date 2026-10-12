@@ -11,6 +11,7 @@ class NetworkTests(unittest.TestCase):
   d=fixture();d['rules'][0]['sources']=['0.0.0.0/0'];self.assertEqual(assess(d,NOW)['results'][0]['status'],'fail')
  def test_any_any(self):
   d=fixture();d['rules'][0].update(sources=['0.0.0.0/0'],destinations=['0.0.0.0/0'],protocol='any',ports='any');self.assertEqual(assess(d,NOW)['results'][1]['status'],'fail')
+  d['rules'][0]['sources']=['0.0.0.0/1','128.0.0.0/1'];self.assertEqual(assess(d,NOW)['results'][1]['status'],'fail')
  def test_any_any_restricted_port(self):
   d=fixture();d['rules'][0].update(sources=['0.0.0.0/0'],destinations=['0.0.0.0/0'],protocol='any',ports=[22]);self.assertEqual(assess(d,NOW)['results'][1]['status'],'pass')
  def test_unsafe_services(self):
