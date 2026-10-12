@@ -1,0 +1,30 @@
+{
+  "schema_version": "network-inventory-1.0",
+  "scope": "synthetic-network",
+  "synthetic": true,
+  "semantics": "rule-inventory",
+  "trusted_sources": [
+    "10.0.0.0/24"
+  ],
+  "rules": [
+    {
+      "id": "synthetic-management",
+      "enabled": true,
+      "action": "allow",
+      "sources": [
+        "10.0.0.0/25"
+      ],
+      "destinations": [
+        "192.0.2.1/32"
+      ],
+      "protocol": "tcp",
+      "ports": [
+        22
+      ],
+      "management": true,
+      "management_service": "ssh",
+      "significant": true,
+      "logging": null
+    }
+  ]
+}

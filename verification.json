@@ -1,0 +1,19 @@
+{
+  "product_version": "0.1.0a1",
+  "test_methods": 24,
+  "documentation_pairs": 12,
+  "clean_wheel_install": "passed",
+  "hosted_ci": {
+    "run_id": 38239150555,
+    "status": "passed",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "python": "3.13"
+  },
+  "effective_reachability": "not_tested",
+  "vendor_adapter": "not_implemented",
+  "network_connections": "not_performed"
+}

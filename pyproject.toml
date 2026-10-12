@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools==84.0.0", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "network-config-opsec-auditor"
+version = "0.1.0a1"
+requires-python = ">=3.12"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["opsec-report-contract==0.1.0a1"]
+[project.scripts]
+network-audit = "network_auditor.cli:main"
+[tool.setuptools]
+packages = ["network_auditor"]
